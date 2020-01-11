@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>ExcelRChatbot</title>
+    <style>
+        .navbar {
+            background-color: lightblue;
+            display: block;
+            margin: auto;
+            width: 100%;
+        }
+
+        .navbar ul {
+            text-align: center;
+            display: block;
+            margin: auto;
+            width: 100%;
+            text-decoration: none;
+        }
+
+        .navbar ul li {
+            color: navy;
+            background-color: lightblue;
+            display: inline;
+            border-radius: 20px;
+            margin: 10px;
+            padding: 6px 30px;
+            text-decoration: none;
+        }
+
+        .navbar ul li a {
+            color: navy;
+            text-transform: uppercase;
+        }
+
+        .navbar ul li:hover {
+            color: orangered;
+            border: 2px solid purple;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/admin">Admin</a></li>
+            <li><a href="/login">Login</a></li>
+        </ul>
+    </div>
+
+
+    <div>
+        <div class="float-md-right" style="padding-right: 100px; padding-top:50px ; margin-right:100px;">
+            <h3 class='alert alert-info'>This Chatbot is a sample </h3>
+            <iframe allow="microphone;" width="350" height="430" style="border-radius: 30px;"
+                src="https://console.dialogflow.com/api-client/demo/embedded/1396bbb4-c705-45a7-bdde-9313437dea24">
+            </iframe>
+        </div>
+        <div class="float-md-left" style="padding: 50px; margin-left:60px ;">
+            <h3 class="alert alert-success">Some Basic Questions we can ask to Neomi</h3>
+            <div class="container alert alert-dark ">
+                <p>Can you fix an appointment at Bangalore</p>
+                <p>Can I meet on monday</p>
+                <p>I want to learn Data Science</p>
+                <p>Course Duration</p>
+                <p>Course Duration for Data Science</p>
+                <p>Can I Have an appointment tomorrow</p>
+                <p>What is the course Duration</p>
+                <p>Which courses are available</p>
+
+            </div>
+            <p class="alert alert-info">It will remember which course you have selected so far</p>
+            <p class="alert alert-warning">If Location you provided have no ExcelR Branch, it will fix the Appointment
+                at Bangalore by default</p>
+            <p class="alert alert-warning">It know the Duration for only "Data Science" and "Master in Data Science"
+                course</p>
+            </divclass="float-md-right">
+        </div>
+
+</body>
+
+</html>

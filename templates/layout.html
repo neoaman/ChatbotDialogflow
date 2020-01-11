@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>ExcelRChatbot</title>
+    <style>
+        .navbar{
+            background-color: lightblue;
+            display:block;
+            margin: auto;
+            width: 100%;
+        }
+        .navbar ul{
+            text-align: center;
+            display: block;
+            margin: auto;
+            width: 100%;
+            text-decoration: none;
+        }
+        .navbar ul li {
+            color: navy;
+            background-color: lightblue;
+            display: inline;
+            border-radius: 20px;
+            margin: 10px;
+            padding: 6px 30px;
+            text-decoration: none;
+        }
+        .navbar ul li a{
+            color: navy;
+            text-transform: uppercase;
+        }
+        .navbar ul li:hover{
+            color: orangered;
+            border: 2px solid purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="/admin">Admin</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/logout">contact</a></li>
+        </ul>
+    </div>
+
+{% block body %}
+
+{% endblock %}
+
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .navbar {
+            background-color: lightblue;
+            display: block;
+            margin: auto;
+            width: 100%;
+        }
+
+        .navbar ul {
+            text-align: center;
+            display: block;
+            margin: auto;
+            width: 100%;
+            text-decoration: none;
+        }
+
+        .navbar ul li {
+            color: navy;
+            background-color: lightblue;
+            display: inline;
+            border-radius: 20px;
+            margin: 10px;
+            padding: 6px 30px;
+            text-decoration: none;
+        }
+
+        .navbar ul a li {
+            color: navy;
+            text-transform: uppercase;
+        }
+
+        .navbar ul li:hover {
+            color: orangered;
+            text-decoration: none;
+            border: 2px solid purple;
+        }
+
+        .neo {
+            border-radius: 20px;
+            padding: 3px 9px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul>
+            <a href="/">
+                <li>Home</li>
+            </a>
+            <a href="/admin">
+                <li>Admin</li>
+            </a>
+            <a href="/logout">
+                <li>Logout</li>
+            </a>
+        </ul>
+    </div>
+    <div class='container'>
+        <hr>
+        <h3 style="text-align: center;" >CONTACT INFORMATION</h3>
+        <hr>
+    </div>
+
+    <div class="container ">
+        <form style="align-items: center; display: block; margin: auto; width: fit-content;" action="/admin"
+            method="POST">
+            <select class="neo" style="border: 2px solid gray; padding:4px 20px ; " name="branch" id="location">
+                <option value="All">All</option>
+                <option value="Bengaluru">Bengaluru</option>
+                <option value="Pune">Pune</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Hyderabad">Hyderabad</option>
+            </select>
+            <input class='neo' style="background-color:lightblue ;" type="date" name='startdate'
+                value="{{ request.form['startdate'] }}">
+            <input class="neo" style="background-color:lightblue" type="date" name='enddate'
+                value="{{ request.form['enddate'] }}">
+            <button class="neo" style=" background-color: royalblue; padding:3px 12px ;" type="submit">Submit</button>
+            <button class="neo" style=" background-color: royalblue; padding:3px 12px ;" type="reset">Reset</button>
+            
+        </form>
+        <br>
+    </div>
+    <div class="container" style="overflow: auto; height: 700px;">
+        <table class="table table-dark" style="border-radius: 20px;">
+            <thead style="border-radius: 20px; ">
+                <tr>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Branch</th>
+                    <th>Contact Number</th>
+                    <th>Email</th>
+                    <th>Appointment Date</th>
+                </tr>
+            </thead>
+            <tbody style="border-radius: 20px;">
+                {% for row in info %}
+                <tr>
+                    <td>{{row.name}}</td>
+                    <td>{{row.course}}</td>
+                    <td>{{row.branch}}</td>
+                    <td>{{row.phone_num}}</td>
+                    <td>{{row.email}}</td>
+                    <td>{{row.date}}</td>
+                    <td><a href="/delete/{{row.sno}}"><button class="btn btn-primary">Delete</button></a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
