@@ -1,5 +1,7 @@
 # ChatbotDialogflow
-This is only the flask part, I haven't given any Information about the Dialog flow here. Its for my personal Use, so never mind.
+This is only the flask part, I haven't given any Information about the Dialog flow here. I wish Creating Intents and entities is already done. 
+## Tools Used: Python, ngrok (for webhooking to the dialogflow locally)
+## Packages Used : Flask, Flask-SQLAlchemy, Json.
 
 ## In this repository I have connected the intents to the MYSQL data base.
 
