@@ -2,8 +2,8 @@
     "params":
     {
       "local_uri": "mysql://root:@localhost/chatbot",  
-      "neomi_uri": "mysql://u2mjax6upm7npdsf:P1SK1f8ANhqVgVbw7k3R@bqfkrrdbraca0wu2khkt-mysql.services.clever-cloud.com:3306/bqfkrrdbraca0wu2khkt",
-      "prod_uri": "mysql://bRYXoZqUJx:YiEgBcwvxh@remotemysql.com:3306/bRYXoZqUJx",
+      "neomi_uri": "mysql://ru2mjax6upm7npdsf:P1SK1f8ANhqVgVbw7k3R@bqfkrrdbraca0wu2khkt-mysql.services.cleverr-cloud.com:3306/bqfkrrdbraca0wu2khkt",
+      "prod_uri": "mysql://bRYXoZqUJx:YiEgBcwvxh@remotemysqlr.com:3306/bRYXoZqUJx",
       "fb_url": "https://www.facebook.com/aman.patel.505960",
       "twitter_url": "https://twitter.com/amanthe001",
       "git_url": "https://github.com/neoaman",
